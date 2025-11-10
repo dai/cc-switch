@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
 interface LanguageSettingsProps {
-  value: "zh" | "en";
-  onChange: (value: "zh" | "en") => void;
+  value: "zh" | "en" | "ja";
+  onChange: (value: "zh" | "en" | "ja") => void;
 }
 
 export function LanguageSettings({ value, onChange }: LanguageSettingsProps) {
@@ -24,6 +24,9 @@ export function LanguageSettings({ value, onChange }: LanguageSettingsProps) {
         </LanguageButton>
         <LanguageButton active={value === "en"} onClick={() => onChange("en")}>
           {t("settings.languageOptionEnglish")}
+        </LanguageButton>
+        <LanguageButton active={value === "ja"} onClick={() => onChange("ja")}>
+          {t("settings.languageOptionJapanese")}
         </LanguageButton>
       </div>
     </section>

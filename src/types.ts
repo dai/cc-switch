@@ -90,7 +90,7 @@ export interface Settings {
   // 覆盖 Codex 配置目录（可选）
   codexConfigDir?: string;
   // 首选语言（可选，默认中文）
-  language?: "en" | "zh";
+  language?: "en" | "zh" | "ja";
   // Claude 自定义端点列表
   customEndpointsClaude?: Record<string, CustomEndpoint>;
   // Codex 自定义端点列表
